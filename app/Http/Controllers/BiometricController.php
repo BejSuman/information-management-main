@@ -38,6 +38,7 @@ class BiometricController extends Controller
 
         $biometricData = Biometric::where('year', $year)->where('month', $month)->first();
 
+
         if (!empty($biometricData)) {
             return json_encode(['status' => true, 'msg' => 'Data found.', 'data' => $biometricData]);
         } else {
